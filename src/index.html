@@ -14,6 +14,32 @@
       <img src="https://cdn140.picsart.com/297276402152201.png?r1024x1024" alt="instrucciones" class="instrucciones">
       <button type="button" class="comenzar" name="comenzar" onclick="comenzar();">Comenzar</button>
     </div>
+    <!-- Esta es la segunda página-->
+    <div class="pagina-secundaria" id="pagina-secundaria">
+      <h1>Ahora podrás cifrar y descifrar tus conversaciones antes de enviarlas</h1>
+      <div class="bloque-cifrado">
+        <form class="cifrado" method="post">
+          <label for="cuadro-cifrado">Mensaje:</label>
+          <textarea id="cuadro-cifrado" class="cuadro-cifrado" placeholder="Escribe tu frase o mensaje"></textarea><br>
+          <label for="cuadro-mov">Número:</label>
+          <input type="text" placeholder="#" id="cuadro-mov" class="cuadro-mov" required/>
+          <button type="button" class="cifrar" name="cifrar" onclick="cifrar();">Cifrar</button>
+          <span>Aquí obtendrás tu mensaje cifrado:</span>
+          <p class="mensaje-cifrado">Prueba 1</p>
+        </form>
+      </div>
+      <div class="bloque-descifrado">
+        <form class="descifrado" method="post">
+          <label for="cuadro-descifrado">Mensaje: </label>
+          <textarea id="cuadro-descifrado" class="cuadro-descifrado" placeholder="Escribe tu frase o mensaje"></textarea><br>
+          <label for="cuadro-mov2">Número:</label>
+          <input type="text" placeholder="#" id="cuadro-mov2" class="cuadro-mov2" required/>
+          <button type="button" class="descifrar" name="descifrar" onclick="descifrar();">Descifrar</button>
+          <span>Aquí obtendrás tu mensaje descifrado:</span>
+          <p class="mensaje-descifrado"> Prueba 2</p>
+        </form>
+      </div>
+    </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>

@@ -1,0 +1,104 @@
+body,html  {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   background-image: url('https://cdn140.picsart.com/297017444105201.jpg?r1024x1024');
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+   text-align: center;
+}
+img.logo-principal{
+width: 250px;
+height: 150px;
+display:block;
+margin:auto;
+}
+.pagina-principal{
+  width: 80%;
+  display:block;
+  margin:auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background:rgba(245, 245, 245, 0.5);
+}
+.instrucciones{
+  width: 75%;
+  height: 75%;
+  display:block;
+  margin:auto;
+}
+h1{
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-weight:normal;
+  font-size: 25px;
+}
+.bloque-cifrado{
+  background:rgba(245, 82, 55, 0.4);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.bloque-descifrado{
+  background:rgba(11, 173, 146, 0.4);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+form{
+  width: 60%;
+  padding: 20px;
+  display:block;
+  margin:auto;
+  font-family: 'Pacifico', cursive;
+  font-size: 18px;
+  text-align: center;
+}
+textarea{
+  resize: none;
+  height: 60px;
+  width: 40%;
+}
+textarea:focus, input:focus{
+  border: 1px solid #000;
+}
+textarea, input{
+  border-radius: 4px;
+  font-family:'Ubuntu', sans-serif;
+  padding: 5px;
+}
+label, textarea{
+  display:inline-block;
+  vertical-align:middle;
+}
+.cuadro-mov, .cuadro-mov2{
+  width: 7%;
+  margin-top: 10px;
+}
+button{
+  border-radius: 5px;
+  border:none;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 18px;
+  cursor:pointer;
+  font-family:'Ubuntu', sans-serif;
+  background:#000;
+  color:#fff;
+  display: block;
+}
+button:hover{
+  background:#fff;
+  color:#000;
+}
+.mensaje-cifrado,.mensaje-descifrado{
+  border-radius: 10px;
+  border: 2px solid #fff;
+  padding: 8px;
+  font-family:'Ubuntu', sans-serif;
+  font-size: 16px;
+}
