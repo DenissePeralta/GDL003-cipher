@@ -26,8 +26,8 @@ margin:auto;
   background:rgba(245, 245, 245, 0.5);
 }
 .instrucciones{
-  width: 75%;
-  height: 75%;
+  width: 70%;
+  height: 70%;
   display:block;
   margin:auto;
 }
@@ -83,8 +83,8 @@ button{
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  padding: 8px;
-  font-size: 18px;
+  padding: 9px;
+  font-size: 19px;
   cursor:pointer;
   font-family:'Ubuntu', sans-serif;
   background:#000;
