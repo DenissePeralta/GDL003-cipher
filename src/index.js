@@ -26,7 +26,7 @@ function cifrando() {
 		valorTexto = valorTexto.toUpperCase();
     posicionAlfabeto = valorTexto.charCodeAt(i);
     formulaAlfabeto = posicionAlfabeto + valorNumero;
-    if (formulaAlfabeto <= 90) {
+    if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
       fraseCifrada = fraseCifrada + String.fromCharCode(formulaAlfabeto);
     } else {
       formulaCesar = ((posicionAlfabeto - 65 + valorNumero) % 26) + 65;
@@ -54,12 +54,24 @@ function descifrando() {
 		valorTexto = valorTexto.toUpperCase();
     posicionAlfabeto = valorTexto.charCodeAt(i);
     formulaAlfabeto = posicionAlfabeto - valorNumero;
-    if (formulaAlfabeto <= 90) {
+    if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
       fraseDescifrada = fraseDescifrada + String.fromCharCode(formulaAlfabeto);
     } else {
-      formulaCesar = ((posicionAlfabeto - 65 + valorNumero) % 26) + 65;
+      formulaCesar = ((posicionAlfabeto + 65 - valorNumero) % 26) + 65;
       fraseDescifrada = fraseDescifrada + String.fromCharCode(formulaCesar);
     }
     document.getElementById("mensaje-descifrado").innerHTML = fraseDescifrada;
 	}
+}
+//Esta función es para limpiar valores de cifrado
+function LimpiarCif() {
+	document.getElementById("cuadro-cifrado").value ="";
+	document.getElementById("cuadro-mov").value = "";
+	document.getElementById("mensaje-cifrado").innerHTML = "";;
+}
+//Esta función es para limpiar valores de descifrado
+function LimpiarDes() {
+	document.getElementById("cuadro-descifrado").value ="";
+	document.getElementById("cuadro-mov2").value = "";
+	document.getElementById("mensaje-descifrado").innerHTML = "";;
 }
