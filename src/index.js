@@ -1,6 +1,5 @@
 document.getElementById("pagina-principal").style.display = "block";
 document.getElementById("pagina-secundaria").style.display = "none";
-document.getElementById("mensaje-error").style.display = "none";
 
 //Esta función es para pasar a la siguiente pantalla
 function comenzar() {
@@ -17,16 +16,16 @@ function cifrando() {
 	let formulaAlfabeto = 0;
 	let formulaCesar = 0;
 
-	if (valorTexto === "" && valorNumero === "") {
-	let mensajeError = "Ingresa un valor en ambos campos!!";
-	document.getElementById("mensaje-error").innerHTML = mensajeError;
-  }
-
 	for (let i = 0; i < valorTexto.length; i++) {
 		valorTexto = valorTexto.toUpperCase();
     posicionAlfabeto = valorTexto.charCodeAt(i);
     formulaAlfabeto = posicionAlfabeto + valorNumero;
-    if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
+		if (valorTexto === "" && valorNumero === "") {
+			let mensajeError = "Ingresa un valor en ambos campos!!";
+			document.getElementById("mensaje-error").innerHTML = mensajeError;
+		} else if (posicionAlfabeto === 32) {
+			fraseCifrada = fraseCifrada + String.fromCharCode(posicionAlfabeto);
+		} else if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
       fraseCifrada = fraseCifrada + String.fromCharCode(formulaAlfabeto);
     } else {
       formulaCesar = ((posicionAlfabeto - 65 + valorNumero) % 26) + 65;
@@ -45,16 +44,16 @@ function descifrando() {
 	let formulaAlfabeto = 0;
 	let formulaCesar = 0;
 
-	if (valorTexto === "" && valorNumero === "") {
-	let mensajeError = "Ingresa un valor en ambos campos!!";
-	document.getElementById("mensaje-error2").innerHTML = mensajeError;
-  }
-
 	for (let i = 0; i < valorTexto.length; i++) {
 		valorTexto = valorTexto.toUpperCase();
     posicionAlfabeto = valorTexto.charCodeAt(i);
     formulaAlfabeto = posicionAlfabeto - valorNumero;
-    if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
+		if (valorTexto === "" && valorNumero === "") {
+			let mensajeError = "Ingresa un valor en ambos campos!!";
+			document.getElementById("mensaje-error").innerHTML = mensajeError;
+		} else if (posicionAlfabeto === 32) {
+			fraseDescifrada = fraseDescifrada + String.fromCharCode(posicionAlfabeto);
+    } else if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
       fraseDescifrada = fraseDescifrada + String.fromCharCode(formulaAlfabeto);
     } else {
       formulaCesar = ((posicionAlfabeto + 65 - valorNumero) % 26) + 65;
