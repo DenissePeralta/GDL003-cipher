@@ -56,6 +56,13 @@ form{
   font-size: 18px;
   text-align: center;
 }
+.mensaje-error, .mensaje-error2{
+  font-family:'Ubuntu', sans-serif;
+  text-align: center;
+  color:#BA0737;
+  font-weight:bold;
+  font-size: 16px;
+}
 textarea{
   resize: none;
   height: 60px;

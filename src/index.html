@@ -12,36 +12,44 @@
       <img class="logo-principal" src="https://cdn140.picsart.com/297017332206201.png?r1024x1024" alt="logo">
       <div class="pagina-principal" id="pagina-principal">
          <img src="https://cdn140.picsart.com/297276402152201.png?r1024x1024" alt="instrucciones" class="instrucciones">
-         <button type="button" class="comenzar" name="comenzar" onclick="comenzar();">Comenzar</button>
+         <button type="button" class="comenzar" id="comenzar">Comenzar</button>
       </div>
       <!-- Esta es la segunda página-->
       <div class="pagina-secundaria" id="pagina-secundaria">
          <h1>Ahora podrás cifrar y descifrar tus conversaciones antes de enviarlas</h1>
          <div class="bloque-cifrado">
             <form class="cifrado" method="post">
+              <p class="mensaje-error" id="mensaje-error">&#128314; Debes ingresar un valor en ambos campos &#128314;</p>
               <label for="cuadro-cifrado">Mensaje:</label>
                <textarea id="cuadro-cifrado" class="cuadro-cifrado" placeholder="Escribe tu frase o mensaje"></textarea>
                <label for="cuadro-mov">Número:</label>
                <input type="text" placeholder="#" id="cuadro-mov" class="cuadro-mov" required/>
-               <button type="button" class="cifrar" name="cifrar" onclick="cifrando();">Cifrar</button>
-               <span class="mensaje-error" id="mensaje-error"></span>
+               <button type="button" class="cifrar" id="cifrar">Cifrar</button>
                <p>Aquí obtendrás tu mensaje cifrado:</p>
                <span class="mensaje-cifrado" id="mensaje-cifrado"></span>
-               <button type="button" class="limpiar-valores" name="limpiar-valores" onclick="LimpiarCif();">Limpiar valores</button>
+               <button type="button" class="limpiar-valores" id="limpiar-valores">Limpiar valores</button>
             </form>
          </div>
          <div class="bloque-descifrado">
             <form class="descifrado" method="post">
+              <p class="mensaje-error2" id="mensaje-error2">&#128314; Debes ingresar un valor en ambos campos &#128314;</p>
                <label for="cuadro-descifrado">Mensaje: </label>
                <textarea id="cuadro-descifrado" class="cuadro-descifrado" placeholder="Escribe tu frase o mensaje"></textarea>
                <label for="cuadro-mov2">Número:</label>
                <input type="text" placeholder="#" id="cuadro-mov2" class="cuadro-mov2" required/>
-               <button type="button" class="descifrar" name="descifrar" onclick="descifrando();">Descifrar</button>
-               <span class="mensaje-error2" id="mensaje-error2"></span>
+               <button type="button" class="descifrar" id="descifrar">Descifrar</button>
                <p>Aquí obtendrás tu mensaje descifrado:</p>
                <span class="mensaje-descifrado" id="mensaje-descifrado"></span>
-               <button type="button" class="limpiar-valores2" name="limpiar-valores2" onclick="LimpiarDes();">Limpiar valores</button>
+               <button type="button" class="limpiar-valores2" id="limpiar-valores2">Limpiar valores</button>
             </form>
+         </div>
+         <div class="social">
+            <ul>
+              <li><a href="http://www." class="icon-"></a></li>
+              <li><a href="http://www." class="icon-"></a></li>
+              <li><a href="http://www." class="icon-"></a></li>
+              <li><a href="http://www." class="icon-"></a></li>
+            </ul>
          </div>
       </div>
       <script src="cipher.js"></script>

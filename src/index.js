@@ -1,76 +1,54 @@
 document.getElementById("pagina-principal").style.display = "block";
 document.getElementById("pagina-secundaria").style.display = "none";
+document.getElementById("mensaje-error").style.display = "none";
+document.getElementById("mensaje-error2").style.display = "none";
 
 //Esta función es para pasar a la siguiente pantalla
-function comenzar() {
+let btnComenzar = document.getElementById('comenzar');
+btnComenzar.addEventListener("click", () => {
 	document.getElementById("pagina-principal").style.display = "none";
 	document.getElementById("pagina-secundaria").style.display = "block";
-}
+});
 
 //Esta función es para cifrar mensaje
-function cifrando() {
-	let valorTexto = document.getElementById("cuadro-cifrado").value;
-	let valorNumero = parseInt(document.getElementById("cuadro-mov").value);
-	let posicionAlfabeto = 0;
-	let fraseCifrada = "";
-	let formulaAlfabeto = 0;
-	let formulaCesar = 0;
-
-	for (let i = 0; i < valorTexto.length; i++) {
-		valorTexto = valorTexto.toUpperCase();
-    posicionAlfabeto = valorTexto.charCodeAt(i);
-    formulaAlfabeto = posicionAlfabeto + valorNumero;
-		if (valorTexto === "" && valorNumero === "") {
-			let mensajeError = "Ingresa un valor en ambos campos!!";
-			document.getElementById("mensaje-error").innerHTML = mensajeError;
-		} else if (posicionAlfabeto === 32) {
-			fraseCifrada = fraseCifrada + String.fromCharCode(posicionAlfabeto);
-		} else if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
-      fraseCifrada = fraseCifrada + String.fromCharCode(formulaAlfabeto);
-    } else {
-      formulaCesar = ((posicionAlfabeto - 65 + valorNumero) % 26) + 65;
-      fraseCifrada = fraseCifrada + String.fromCharCode(formulaCesar);
-    }
-    document.getElementById("mensaje-cifrado").innerHTML = fraseCifrada;
+let btnEncode = document.getElementById('cifrar');
+btnEncode.addEventListener("click", () => {
+	let textValue = document.getElementById("cuadro-cifrado").value;
+	let offset = parseInt(document.getElementById("cuadro-mov").value);
+	let cifrar = window.cipher.encode(textValue,offset);
+	if (textValue === "" || offset === "") {
+		document.getElementById("mensaje-error").style.display = "block";
+	} else {
+		document.getElementById("mensaje-error").style.display = "none";
 	}
-}
+	document.getElementById("mensaje-cifrado").innerHTML = cifrar;
+});
 
 //Esta función es para descifrar mensaje
-function descifrando() {
-	let valorTexto = document.getElementById("cuadro-descifrado").value;
-	let valorNumero = parseInt(document.getElementById("cuadro-mov2").value);
-	let posicionAlfabeto = 0;
-	let fraseDescifrada = "";
-	let formulaAlfabeto = 0;
-	let formulaCesar = 0;
-
-	for (let i = 0; i < valorTexto.length; i++) {
-		valorTexto = valorTexto.toUpperCase();
-    posicionAlfabeto = valorTexto.charCodeAt(i);
-    formulaAlfabeto = posicionAlfabeto - valorNumero;
-		if (valorTexto === "" && valorNumero === "") {
-			let mensajeError = "Ingresa un valor en ambos campos!!";
-			document.getElementById("mensaje-error").innerHTML = mensajeError;
-		} else if (posicionAlfabeto === 32) {
-			fraseDescifrada = fraseDescifrada + String.fromCharCode(posicionAlfabeto);
-    } else if (formulaAlfabeto >= 65 && formulaAlfabeto <= 90) {
-      fraseDescifrada = fraseDescifrada + String.fromCharCode(formulaAlfabeto);
-    } else {
-      formulaCesar = ((posicionAlfabeto + 65 - valorNumero) % 26) + 65;
-      fraseDescifrada = fraseDescifrada + String.fromCharCode(formulaCesar);
-    }
-    document.getElementById("mensaje-descifrado").innerHTML = fraseDescifrada;
+let btnDecode = document.getElementById('descifrar');
+btnDecode.addEventListener("click", () => {
+	let textValue = document.getElementById("cuadro-descifrado").value;
+	let offset = parseInt(document.getElementById("cuadro-mov2").value);
+	let descifrar = window.cipher.decode(textValue,offset);
+	if (textValue === "" || offset === "") {
+		document.getElementById("mensaje-error2").style.display = "block";
+	} else {
+		document.getElementById("mensaje-error2").style.display = "none";
 	}
-}
+	document.getElementById("mensaje-descifrado").innerHTML = descifrar;
+});
+
 //Esta función es para limpiar valores de cifrado
-function LimpiarCif() {
-	document.getElementById("cuadro-cifrado").value ="";
+let btnClearEncode = document.getElementById('limpiar-valores');
+btnClearEncode.addEventListener("click", () => {
+	document.getElementById("cuadro-cifrado").value = "";
 	document.getElementById("cuadro-mov").value = "";
-	document.getElementById("mensaje-cifrado").innerHTML = "";;
-}
+	document.getElementById("mensaje-cifrado").innerHTML = "";
+});
 //Esta función es para limpiar valores de descifrado
-function LimpiarDes() {
-	document.getElementById("cuadro-descifrado").value ="";
+let btnClearDecode = document.getElementById('limpiar-valores2');
+btnClearDecode.addEventListener("click", () => {
+	document.getElementById("cuadro-descifrado").value = "";
 	document.getElementById("cuadro-mov2").value = "";
-	document.getElementById("mensaje-descifrado").innerHTML = "";;
-}
+	document.getElementById("mensaje-descifrado").innerHTML = "";
+});
