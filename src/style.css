@@ -109,3 +109,17 @@ button:hover{
   font-family:'Ubuntu', sans-serif;
   font-size: 16px;
 }
+.social{
+  position: fixed;
+  left: 0;
+  top: 230px;
+  z-index: 2000px;
+}
+.social ul{
+  list-style: none;
+}
+.social ul li a{
+  display: inline-block;
+  padding: 8px 2px;
+  text-decoration: none;
+}

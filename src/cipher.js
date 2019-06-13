@@ -1,8 +1,8 @@
 window.cipher = {
   // ... let ascii = textValue[i].toUpperCase().charCodeAt();
-  /*} else if (ascii >= 97 && ascii <= 122) {
-    let caesarOp = (ascii + 97 - offset) % 26 + 97;
-    decodePhrase += String.fromCharCode(caesarOp);*/
+  /*  } else if ((ascii + 97 - offset) % 26 === 0) {
+      let caesarOp = ascii - ((ascii + 97 - offset)/26);
+      decodePhrase += String.fromCharCode(caesarOp);*/
   encode: (textValue,offset) => {
     let encodePhrase = "";
     for (let i = 0; i < textValue.length; i++) {
