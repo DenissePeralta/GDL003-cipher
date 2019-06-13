@@ -3,7 +3,7 @@ window.cipher = {
   /*  } else if ((ascii + 97 - offset) % 26 === 0) {
       let caesarOp = ascii - ((ascii + 97 - offset)/26);
       decodePhrase += String.fromCharCode(caesarOp);*/
-  encode: (textValue,offset) => {
+  encode: (offset,textValue) => {
     let encodePhrase = "";
     for (let i = 0; i < textValue.length; i++) {
       let ascii = textValue[i].charCodeAt();
@@ -20,7 +20,7 @@ window.cipher = {
     return encodePhrase;
   },
 
-  decode: (textValue,offset) => {
+  decode: (offset,textValue) => {
     let decodePhrase = "";
     for (let i = 0; i < textValue.length; i++) {
       let ascii = textValue[i].charCodeAt();
@@ -28,7 +28,7 @@ window.cipher = {
         let caesarOp = (ascii + 65 - offset) % 26 + 65;
         decodePhrase += String.fromCharCode(caesarOp);
       } else if (ascii >= 97 && ascii <= 122) {
-        let caesarOp = (ascii + 97 - offset) % 26 + 97;
+        let caesarOp = (ascii - 122 - offset) % 26 + 122;
         decodePhrase += String.fromCharCode(caesarOp);
       } else {
         decodePhrase += String.fromCharCode(ascii);

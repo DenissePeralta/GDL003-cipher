@@ -15,7 +15,7 @@ let btnEncode = document.getElementById('cifrar');
 btnEncode.addEventListener("click", () => {
 	let textValue = document.getElementById("cuadro-cifrado").value;
 	let offset = parseInt(document.getElementById("cuadro-mov").value);
-	let cifrar = window.cipher.encode(textValue,offset);
+	let cifrar = window.cipher.encode(offset,textValue);
 	if (textValue === "" || offset === "") {
 		document.getElementById("mensaje-error").style.display = "block";
 	} else {
@@ -29,7 +29,7 @@ let btnDecode = document.getElementById('descifrar');
 btnDecode.addEventListener("click", () => {
 	let textValue = document.getElementById("cuadro-descifrado").value;
 	let offset = parseInt(document.getElementById("cuadro-mov2").value);
-	let descifrar = window.cipher.decode(textValue,offset);
+	let descifrar = window.cipher.decode(offset,textValue);
 	if (textValue === "" || offset === "") {
 		document.getElementById("mensaje-error2").style.display = "block";
 	} else {
