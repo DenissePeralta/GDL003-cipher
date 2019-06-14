@@ -11,10 +11,10 @@ body,html  {
    text-align: center;
 }
 img.logo-principal{
-width: 250px;
-height: 150px;
-display:block;
-margin:auto;
+  width: 250px;
+  height: 150px;
+  display:block;
+  margin:auto;
 }
 .pagina-principal{
   width: 80%;
@@ -120,6 +120,10 @@ button:hover{
 }
 .social ul li a{
   display: inline-block;
-  padding: 8px 2px;
+  margin-bottom: 15px;
   text-decoration: none;
+}
+.iconoRS:hover {
+  width: 40px;
+  height: 40px;
 }
