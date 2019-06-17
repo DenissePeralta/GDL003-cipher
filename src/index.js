@@ -15,13 +15,13 @@ let btnEncode = document.getElementById('cifrar');
 btnEncode.addEventListener("click", () => {
 	let textValue = document.getElementById("cuadro-cifrado").value;
 	let offset = parseInt(document.getElementById("cuadro-mov").value);
-	let cifrar = window.cipher.encode(offset,textValue);
+	let encoded = window.cipher.encode(offset,textValue);
 	if (textValue === "" || offset === "") {
 		document.getElementById("mensaje-error").style.display = "block";
 	} else {
 		document.getElementById("mensaje-error").style.display = "none";
 	}
-	document.getElementById("mensaje-cifrado").innerHTML = cifrar;
+	document.getElementById("mensaje-cifrado").innerHTML = encoded;
 });
 
 //Esta función es para descifrar mensaje
@@ -29,13 +29,13 @@ let btnDecode = document.getElementById('descifrar');
 btnDecode.addEventListener("click", () => {
 	let textValue = document.getElementById("cuadro-descifrado").value;
 	let offset = parseInt(document.getElementById("cuadro-mov2").value);
-	let descifrar = window.cipher.decode(offset,textValue);
+	let decoded = window.cipher.decode(offset,textValue);
 	if (textValue === "" || offset === "") {
 		document.getElementById("mensaje-error2").style.display = "block";
 	} else {
 		document.getElementById("mensaje-error2").style.display = "none";
 	}
-	document.getElementById("mensaje-descifrado").innerHTML = descifrar;
+	document.getElementById("mensaje-descifrado").innerHTML = decoded;
 });
 
 //Esta función es para limpiar valores de cifrado
