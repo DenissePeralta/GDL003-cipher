@@ -1,12 +1,18 @@
-document.getElementById("pagina-principal").style.display = "block";
+document.getElementById("pagina-instrucciones").style.display = "none";
 document.getElementById("pagina-secundaria").style.display = "none";
 document.getElementById("mensaje-error").style.display = "none";
-document.getElementById("mensaje-error2").style.display = "none";
 
-//Esta función es para pasar a la siguiente pantalla
+//Esta función es para pasar de la página de inicio a la pantalla de instrucciones
 let btnComenzar = document.getElementById('comenzar');
 btnComenzar.addEventListener("click", () => {
-	document.getElementById("pagina-principal").style.display = "none";
+	document.getElementById("pagina-inicio").style.display = "none";
+	document.getElementById("pagina-instrucciones").style.display = "block";
+});
+
+//Esta función es para pasar de la pantalla de instrucciones a la de cifrado y descifrado
+let btnSiguiente = document.getElementById('siguiente');
+btnSiguiente.addEventListener("click", () => {
+	document.getElementById("pagina-instrucciones").style.display = "none";
 	document.getElementById("pagina-secundaria").style.display = "block";
 });
 
@@ -16,7 +22,7 @@ btnEncode.addEventListener("click", () => {
 	let textValue = document.getElementById("cuadro-cifrado").value;
 	let offset = parseInt(document.getElementById("cuadro-mov").value);
 	let encoded = window.cipher.encode(offset,textValue);
-	if (textValue === "" || offset === "") {
+	if (textValue.length === 0 || offset.length === 0) {
 		document.getElementById("mensaje-error").style.display = "block";
 	} else {
 		document.getElementById("mensaje-error").style.display = "none";
@@ -27,15 +33,15 @@ btnEncode.addEventListener("click", () => {
 //Esta función es para descifrar mensaje
 let btnDecode = document.getElementById('descifrar');
 btnDecode.addEventListener("click", () => {
-	let textValue = document.getElementById("cuadro-descifrado").value;
-	let offset = parseInt(document.getElementById("cuadro-mov2").value);
+	let textValue = document.getElementById("cuadro-cifrado").value;
+	let offset = parseInt(document.getElementById("cuadro-mov").value);
 	let decoded = window.cipher.decode(offset,textValue);
-	if (textValue === "" || offset === "") {
-		document.getElementById("mensaje-error2").style.display = "block";
+	if (textValue.length === 0 || offset.length === 0) {
+		document.getElementById("mensaje-error").style.display = "block";
 	} else {
-		document.getElementById("mensaje-error2").style.display = "none";
+		document.getElementById("mensaje-error").style.display = "none";
 	}
-	document.getElementById("mensaje-descifrado").innerHTML = decoded;
+	document.getElementById("mensaje-cifrado").innerHTML = decoded;
 });
 
 //Esta función es para limpiar valores de cifrado
@@ -44,11 +50,4 @@ btnClearEncode.addEventListener("click", () => {
 	document.getElementById("cuadro-cifrado").value = "";
 	document.getElementById("cuadro-mov").value = "";
 	document.getElementById("mensaje-cifrado").innerHTML = "";
-});
-//Esta función es para limpiar valores de descifrado
-let btnClearDecode = document.getElementById('limpiar-valores2');
-btnClearDecode.addEventListener("click", () => {
-	document.getElementById("cuadro-descifrado").value = "";
-	document.getElementById("cuadro-mov2").value = "";
-	document.getElementById("mensaje-descifrado").innerHTML = "";
 });
