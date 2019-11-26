@@ -2,7 +2,7 @@
 <html>
    <head>
       <meta charset="utf-8">
-      <!-- Links para página responsiva, ícono, archivo css y fuentes de letras google -->
+      <!-- Links for a responsive page, icon, css file and google fonts -->
       <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
       <title>Shhh! Mensajería secreta</title>
       <link rel="shortcut icon" type="image/x-icon" href="Imagenes/cipherIcon.ico">
@@ -12,54 +12,54 @@
       <link href="https://fonts.googleapis.com/css?family=Oswald:300&display=swap" rel="stylesheet">
    </head>
    <body>
-      <!-- Esta es la página de inicio -->
-      <div class="pagina-inicio" id="pagina-inicio">
-         <img class="logo-inicio" src="Imagenes/shhhLogo.png" alt="logo">
-         <button type="button" class="btnComenzar" id="comenzar">Comenzar</button>
+      <!-- Welcome page with start button -->
+      <div class="welcomePage" id="welcomePage">
+         <img class="welcomeLogo" src="Imagenes/shhhLogo.png" alt="logo">
+         <button type="button" class="startButton" id="startButton">Comenzar</button>
       </div>
-         <!-- Esta es la página con Instrucciones-->
-      <div class="pagina-instrucciones" id="pagina-instrucciones">
-         <img class="logo-instrucciones" src="Imagenes/shhhLogo.png" alt="logo">
-         <p class="instrucciones">Shhh! es la nueva aplicación que te permitirá cifrar y descifrar tus
+         <!-- Instructions page with next button -->
+      <div class="instructionsPage" id="instructionsPage">
+         <img class="instructionsLogo" src="Imagenes/shhhLogo.png" alt="logo">
+         <p class="instructions">Shhh! es la nueva aplicación que te permitirá cifrar y descifrar tus
             conversaciones personales para así confundir a los intrusos que quieran leerlas. Obtendrás mensajes 
             secretos en cuestión de segundos, los cuales podrás compartir con todos tus contactos en las diversas redes sociales.<br><br>
             Para comenzar solo tendrás que ingresar el texto que quieras mantener en secreto, escoger un número al azar
             del 1 al 100 para agregarle complejidad y finalmente presionar el botón de cifrar/descifrar para obtener el resultado.
             No olvides anotar y compartir el número que elegiste con las personas que desees para que puedan descifrar el mensaje.<br><br>
          </p>
-         <button type="button" class="btnSiguiente" id="siguiente">Siguiente </button>
+         <button type="button" class="nextButton" id="nextButton">Siguiente </button>
       </div>
-      <!-- Esta es la página principal donde se encuentran 2 botones, el de cifrado y descifrado-->
-      <div class="pagina-secundaria" id="pagina-secundaria">
-         <img class="logo-secundario" src="https://cdn140.picsart.com/297017332206201.png?r1024x1024" alt="logo">
+      <!-- Main page with the cipher and decipher functionality-->
+      <div class="mainPage" id="mainPage">
+         <img class="mainLogo" src="Imagenes/shhhLogo.png" alt="logo">
          <h1>Ahora podrás cifrar y descifrar tus conversaciones antes de enviarlas</h1>
-         <!-- Este es el div de Cifrado/Descifrado-->
-         <div class="bloque-cifrado">
-            <form class="cifrado" method="post">
-               <p class="mensaje-error" id="mensaje-error"></p>
-               <label for="cuadro-cifrado">Mensaje:</label>
-               <textarea id="cuadro-cifrado" class="cuadro-cifrado" placeholder="Escribe una frase o mensaje"></textarea><br>
-               <label for="cuadro-mov">Número:</label>
-               <input type="number" placeholder="###" id="cuadro-mov" class="cuadro-mov"/><br>
-               <button type="button" class="btnPrincipales" id="cifrar">Cifrar</button>
-               <button type="button" class="btnPrincipales" id="descifrar">Descifrar</button>
+         <!-- Section with cipher and decipher form and buttons. Also clear values and copy message buttons-->
+         <div class="cipherDecipherSection">
+            <form class="cipherDecipherForm" method="post">
+               <p class="errorMessage" id="errorMessage"></p>
+               <label for="messageInput">Mensaje:</label>
+               <textarea id="messageInput" class="messageInput" placeholder="Escribe una frase o mensaje"></textarea><br>
+               <label for="numberInput">Número:</label>
+               <input type="number" placeholder="###" id="numberInput" class="numberInput"/><br>
+               <button type="button" class="cipherDecipherButtons" id="cipher">Cifrar</button>
+               <button type="button" class="cipherDecipherButtons" id="decipher">Descifrar</button>
                <p>Aquí obtendrás tu mensaje cifrado/descifrado:</p>
-               <div class="mensaje-cifrado" id="mensaje-cifrado"></div>
-               <button type="button" class="btnSecundarios" id="limpiar-valores">Limpiar valores</button>
-               <button type="button" class="btnSecundarios" id="copiar-mensaje">Copiar mensaje</button>
+               <div class="cipherDecipherMessage" id="cipherDecipherMessage"></div>
+               <button type="button" class="clearCopyButtons" id="clearValuesButton">Limpiar valores</button>
+               <button type="button" class="clearCopyButtons" id="copyMessageButton">Copiar mensaje</button>
             </form>
          </div>
-         <!-- Esta es la barra social-->
+         <!-- Social media links-->
          <div class="social">
             <ul>
-              <li><a href="http://www.facebook.com" target="_blank"><img src="Imagenes/PNG/facebook2.png" alt="Redes Sociales" class="iconoRS"></a></li>
-              <li><a href="http://www.twitter.com" target="_blank"><img src="Imagenes/PNG/twitter.png" alt="Redes Sociales" class="iconoRS"></a></li>
-              <li><a href="http://web.whatsapp.com" target="_blank"><img src="Imagenes/PNG/whatsapp.png" alt="Redes Sociales" class="iconoRS"></a></li>
-              <li><a href="http://www.instagram.com" target="_blank"><img src="Imagenes/PNG/instagram.png" alt="Redes Sociales" class="iconoRS"></a></li>
+              <li><a href="http://www.facebook.com" target="_blank"><img src="Imagenes/PNG/facebook2.png" alt="Redes Sociales" class="socialIcons"></a></li>
+              <li><a href="http://www.twitter.com" target="_blank"><img src="Imagenes/PNG/twitter.png" alt="Redes Sociales" class="socialIcons"></a></li>
+              <li><a href="http://web.whatsapp.com" target="_blank"><img src="Imagenes/PNG/whatsapp.png" alt="Redes Sociales" class="socialIcons"></a></li>
+              <li><a href="http://www.instagram.com" target="_blank"><img src="Imagenes/PNG/instagram.png" alt="Redes Sociales" class="socialIcons"></a></li>
             </ul>
          </div>
       </div>
-       <!-- Archivos javascript para toda la funcionalidad-->
+       <!-- Javascript file links to enable all the functionality-->
       <script src="cipher.js"></script>
       <script src="index.js"></script>
   </body>

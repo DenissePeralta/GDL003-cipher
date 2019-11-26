@@ -1,75 +1,75 @@
-document.getElementById("pagina-instrucciones").style.display = "none";
-document.getElementById("pagina-secundaria").style.display = "none";
+document.getElementById("instructionsPage").style.display = "none";
+document.getElementById("mainPage").style.display = "none";
 
-//Esta función es para pasar de la página de inicio a la pantalla de instrucciones
-let btnComenzar = document.getElementById('comenzar');
-btnComenzar.addEventListener("click", () => {
-	document.getElementById("pagina-inicio").style.display = "none";
-	document.getElementById("pagina-instrucciones").style.display = "block";
+//Function to go from Welcome page to the instructions page
+let startButton = document.getElementById('startButton');
+startButton.addEventListener("click", () => {
+	document.getElementById("welcomePage").style.display = "none";
+	document.getElementById("instructionsPage").style.display = "block";
 });
 
-//Esta función es para pasar de la pantalla de instrucciones a la de cifrado y descifrado
-let btnSiguiente = document.getElementById('siguiente');
-btnSiguiente.addEventListener("click", () => {
-	document.getElementById("pagina-instrucciones").style.display = "none";
-	document.getElementById("pagina-secundaria").style.display = "block";
+//Function to go from instructions page to the cipher/decipher main page
+let nextButton = document.getElementById('nextButton');
+nextButton.addEventListener("click", () => {
+	document.getElementById("instructionsPage").style.display = "none";
+	document.getElementById("mainPage").style.display = "block";
 });
 
-//Esta función es para cifrar mensaje
-let btnEncode = document.getElementById('cifrar');
-btnEncode.addEventListener("click", () => {
-	let textValue = document.getElementById("cuadro-cifrado").value;
-	let offsetValue = document.getElementById("cuadro-mov").value;
-	let offset = parseInt(document.getElementById("cuadro-mov").value);
+//Function to cipher a message
+let encodeButton = document.getElementById('cipher');
+encodeButton.addEventListener("click", () => {
+	let textValue = document.getElementById("messageInput").value;
+	let offsetValue = document.getElementById("numberInput").value;
+	let offset = parseInt(document.getElementById("numberInput").value);
 	let encoded = window.cipher.encode(offset,textValue);
 	if (textValue.length === 0 || offsetValue.length === 0) {
-		document.getElementById("mensaje-error").innerHTML= "⚠️ Debes ingresar un valor en ambos campos";
+		document.getElementById("errorMessage").innerHTML= "⚠️ Debes ingresar un valor en ambos campos";
 	} else if (offset > 100) {
-		document.getElementById("mensaje-error").innerHTML= "⚠️ Debes ingresar un número entero del 1 al 100";
+		document.getElementById("errorMessage").innerHTML= "⚠️ Debes ingresar un número entero del 1 al 100";
 	} else {
-		document.getElementById("mensaje-error").innerHTML= "";
-		document.getElementById("mensaje-cifrado").innerHTML = encoded;
+		document.getElementById("errorMessage").innerHTML= "";
+		document.getElementById("cipherDecipherMessage").innerHTML = encoded;
 	}
 });
 
-//Esta función es para descifrar mensaje
-let btnDecode = document.getElementById('descifrar');
-btnDecode.addEventListener("click", () => {
-	let textValue = document.getElementById("cuadro-cifrado").value;
-	let offsetValue = document.getElementById("cuadro-mov").value;
-	let offset = parseInt(document.getElementById("cuadro-mov").value);
+//Function to decipher a message
+let decodeButton = document.getElementById('decipher');
+decodeButton.addEventListener("click", () => {
+	let textValue = document.getElementById("messageInput").value;
+	let offsetValue = document.getElementById("numberInput").value;
+	let offset = parseInt(document.getElementById("numberInput").value);
 	let decoded = window.cipher.decode(offset,textValue);
 	if (textValue.length === 0 || offsetValue.length === 0) {
-		document.getElementById("mensaje-error").innerHTML= "⚠️ Debes ingresar un valor en ambos campos";
+		document.getElementById("errorMessage").innerHTML= "⚠️ Debes ingresar un valor en ambos campos";
 	} else if (offset > 100) {
-		document.getElementById("mensaje-error").innerHTML= "⚠️ Debes ingresar un número entero del 1 al 100";
+		document.getElementById("errorMessage").innerHTML= "⚠️ Debes ingresar un número entero del 1 al 100";
 	} else {
-		document.getElementById("mensaje-error").innerHTML= "";
-		document.getElementById("mensaje-cifrado").innerHTML = decoded;
+		document.getElementById("errorMessage").innerHTML= "";
+		document.getElementById("cipherDecipherMessage").innerHTML = decoded;
 	}
 });
 
-//Esta función es para limpiar valores de todo el formulario
-let btnClearEncode = document.getElementById('limpiar-valores');
-btnClearEncode.addEventListener("click", () => {
-	document.getElementById("cuadro-cifrado").value = "";
-	document.getElementById("cuadro-mov").value = "";
-	document.getElementById("mensaje-cifrado").innerHTML = "";
-	document.getElementById("mensaje-error").innerHTML = "";
+//Function to clear all the form values/inputs
+let resetValuesButton = document.getElementById('clearValuesButton');
+resetValuesButton.addEventListener("click", () => {
+	document.getElementById("messageInput").value = "";
+	document.getElementById("numberInput").value = "";
+	document.getElementById("cipherDecipherMessage").innerHTML = "";
+	document.getElementById("errorMessage").innerHTML = "";
 });
 
-//Esta función es para copiar el mensaje cifrado/descifrado en el portapapeles (se puede usar en su lugar clipboard.js)
-let btnCopyMessage = document.getElementById('copiar-mensaje');
-btnCopyMessage.addEventListener("click", () => {
-	let mensaje = document.getElementById("mensaje-cifrado").innerHTML;
-	if (mensaje.length === 0) {
-		document.getElementById("mensaje-error").innerHTML= "⚠️ Debes cifrar/descifrar un mensaje primero";
+//Function to copy on the clipboard the cipher/decipher message (we can use the clipboard.js API instead)
+let copyMessageButton = document.getElementById('copyMessageButton');
+copyMessageButton.addEventListener("click", () => {
+	let message = document.getElementById("cipherDecipherMessage").innerHTML;
+	if (message.length === 0) {
+		document.getElementById("errorMessage").innerHTML= "⚠️ Debes cifrar/descifrar un mensaje primero";
 	} else {
-		let inputFalso = document.createElement("input");
-		inputFalso.setAttribute("value", mensaje);
-		document.body.appendChild(inputFalso);
-		inputFalso.select();
+		let falseInput = document.createElement("input");
+		falseInput.setAttribute("value", message);
+		document.body.appendChild(falseInput);
+		falseInput.select();
 		document.execCommand("copy");
-		document.body.removeChild(inputFalso);
+		document.body.removeChild(falseInput);
 	}
 });

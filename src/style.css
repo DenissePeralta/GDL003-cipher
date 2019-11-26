@@ -9,7 +9,7 @@ body,html  {
    background-position: center center;
    background-size: cover;
 }
-.pagina-inicio{
+.welcomePage{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,10 +17,10 @@ body,html  {
   width: 100%;
   height: 100%;
 }
-.logo-inicio {
+.welcomeLogo {
   width: 50%;
 }
-.btnComenzar{
+.startButton{
   border-radius: 5px;
   border: none;
   margin-top: 15px;
@@ -33,7 +33,7 @@ body,html  {
   color:#ffffff;
 
 }
-.pagina-instrucciones{
+.instructionsPage{
   width: 85%;
   display: block;
   margin: auto;
@@ -42,13 +42,13 @@ body,html  {
   padding: 10px;
   background:rgba(245, 245, 245, 0.6);
 }
-.logo-instrucciones{
+.instructionsLogo{
   width: 250px;
   height: 150px;
   display:block;
   margin:auto;
 }
-.instrucciones{
+.instructions{
   display:block;
   font-family: 'Oswald', sans-serif;
   font-size: 25px;
@@ -57,7 +57,7 @@ body,html  {
   text-align: center;
   width: 85%;
 }
-.btnSiguiente{
+.nextButton{
   border-radius: 5px;
   border:none;
   display: block;
@@ -71,14 +71,14 @@ body,html  {
   background:#000000;
   color:#ffffff;
 }
-.pagina-secundaria{
+.mainPage{
   background:rgba(245, 245, 245, 0.6);
   display:block;
   margin:auto;
   padding: 40px;
   width: 79%;
 }
-.logo-secundario{
+.mainLogo{
   width: 250px;
   height: 150px;
   display:block;
@@ -90,7 +90,7 @@ h1{
   font-weight:normal;
   font-size: 25px;
 }
-.bloque-cifrado{
+.cipherDecipherSection{
   background:rgba(245, 82, 55, 0.3);
   margin-top: 20px;
   margin-bottom: 30px;
@@ -104,7 +104,7 @@ form{
   font-size: 18px;
   text-align: center;
 }
-.mensaje-error{
+.errorMessage{
   font-family: 'Oswald', sans-serif;
   text-align: center;
   color:#BA0737;
@@ -129,12 +129,12 @@ label, textarea{
   display:inline-block;
   vertical-align:middle;
 }
-.cuadro-mov{
+.numberInput{
   font-size: 14px;
   width: 10%;
   margin-top: 10px;
 }
-.btnPrincipales{
+.cipherDecipherButtons{
   border-radius: 5px;
   border:none;
   margin: auto;
@@ -148,7 +148,7 @@ label, textarea{
   background:#000000;
   color:#ffffff;
 }
-.btnSecundarios{
+.clearCopyButtons{
   border-radius: 5px;
   border:none;
   margin: auto;
@@ -166,7 +166,7 @@ button:hover{
   background:#ffffff;
   color:#000000;
 }
-.mensaje-cifrado{
+.cipherDecipherMessage{
   border-radius: 10px;
   border: 2px solid #ffffff;
   padding: 8px;
@@ -188,9 +188,9 @@ button:hover{
   margin-bottom: 15px;
   text-decoration: none;
 }
-.iconoRS{
+.socialIcons{
   width: 95%;
 }
-.iconoRS:hover {
+.socialIcons:hover {
   width: 100%;
 }
