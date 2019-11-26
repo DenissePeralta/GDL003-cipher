@@ -49,15 +49,16 @@ btnDecode.addEventListener("click", () => {
 	}
 });
 
-//Esta función es para limpiar valores de cifrado
+//Esta función es para limpiar valores de todo el formulario
 let btnClearEncode = document.getElementById('limpiar-valores');
 btnClearEncode.addEventListener("click", () => {
 	document.getElementById("cuadro-cifrado").value = "";
 	document.getElementById("cuadro-mov").value = "";
 	document.getElementById("mensaje-cifrado").innerHTML = "";
+	document.getElementById("mensaje-error").innerHTML = "";
 });
 
-//Esta función es para copiar el mensaje cifrado/descifrado en el portapapeles (se puede usar tmb clipboard.js)
+//Esta función es para copiar el mensaje cifrado/descifrado en el portapapeles (se puede usar en su lugar clipboard.js)
 let btnCopyMessage = document.getElementById('copiar-mensaje');
 btnCopyMessage.addEventListener("click", () => {
 	let mensaje = document.getElementById("mensaje-cifrado").innerHTML;
