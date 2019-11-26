@@ -51,11 +51,11 @@ body,html  {
 .instrucciones{
   display:block;
   font-family: 'Oswald', sans-serif;
-  font-size: 22px;
+  font-size: 25px;
   margin: auto;
   margin-top: 15px;
   text-align: center;
-  width: 75%;
+  width: 85%;
 }
 .btnSiguiente{
   border-radius: 5px;
@@ -76,7 +76,7 @@ body,html  {
   display:block;
   margin:auto;
   padding: 40px;
-  width: 80%;
+  width: 79%;
 }
 .logo-secundario{
   width: 250px;
@@ -91,12 +91,12 @@ h1{
   font-size: 25px;
 }
 .bloque-cifrado{
-  background:rgba(245, 82, 55, 0.4);
+  background:rgba(245, 82, 55, 0.3);
   margin-top: 20px;
   margin-bottom: 30px;
 }
 form{
-  width: 90%;
+  width: 88%;
   padding: 20px;
   display:block;
   margin:auto;
@@ -105,16 +105,17 @@ form{
   text-align: center;
 }
 .mensaje-error{
-  font-family:'Ubuntu', sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   color:#BA0737;
   font-weight:bold;
-  font-size: 16px;
+  font-size: 17px;
 }
 textarea{
   resize: none;
-  height: 60px;
-  width: 60%;
+  font-size: 14px;
+  height: 80px;
+  width: 65%;
 }
 textarea:focus, input:focus{
   border: 1px solid #000000;
@@ -129,6 +130,7 @@ label, textarea{
   vertical-align:middle;
 }
 .cuadro-mov{
+  font-size: 14px;
   width: 10%;
   margin-top: 10px;
 }
@@ -175,10 +177,11 @@ button:hover{
   position: fixed;
   left: 0;
   top: 240px;
+  width: 76px;
 }
 .social ul{
   list-style: none;
-  padding: 0px 25px;
+  padding: 0px 15px;
 }
 .social ul li a{
   display: inline-block;
@@ -186,8 +189,8 @@ button:hover{
   text-decoration: none;
 }
 .iconoRS{
-  width: 8%;
+  width: 95%;
 }
 .iconoRS:hover {
-  width: 9%;
+  width: 100%;
 }
