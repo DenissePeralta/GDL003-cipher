@@ -252,7 +252,7 @@ button:hover{
     font-size: 26px;
   }
   .mainPage{
-    padding: 50px 26px;
+    padding: 40px 26px;
     margin-top: 90px;
     width: 80%;
   }
@@ -265,8 +265,9 @@ button:hover{
   }
   .social {
     width: 95%;
+    position: absolute;
     text-align: center;
-    top: 0;
+    top: -85px;
   }
   .social ul{
     padding: 2px;
@@ -277,7 +278,7 @@ button:hover{
   }
   .socialIcons{
     float: left;
-    padding: 4px;
+    padding: 2px;
     width: 13%;
   }
 }
