@@ -25,7 +25,7 @@ body,html  {
   border: none;
   margin-top: 15px;
   margin-bottom: 10px;
-  padding: 12px 26px;
+  padding: 14px 30px;
   font-size: 18px;
   cursor: pointer;
   font-family: 'Ubuntu', sans-serif;
@@ -39,22 +39,24 @@ body,html  {
   margin: auto;
   margin-top: 80px;
   margin-bottom: 20px;
-  padding: 60px 10px;
-  background:rgba(245, 245, 245, 0.6);
+  padding: 60px 60px;
+  background:rgba(245, 245, 245, 0.4);
+  border-radius: 18px;
+  border: 6px solid #ffffff;
 }
 .instructionsLogo{
-  width: 33%;
+  width: 34%;
   display:block;
   margin:auto;
 }
 .instructions{
   display:block;
   font-family: 'Oswald', sans-serif;
-  font-size: 25px;
+  font-size: 27px;
   margin: auto;
-  margin-top: 15px;
+  margin-top: 25px;
   text-align: center;
-  width: 85%;
+  width: 60%;
 }
 .nextButton{
   border-radius: 5px;
@@ -71,7 +73,9 @@ body,html  {
   color:#ffffff;
 }
 .mainPage{
-  background:rgba(245, 245, 245, 0.6);
+  background:rgba(245, 245, 245, 0.4);
+  border-radius: 18px;
+  border: 6px solid #ffffff;
   display:block;
   margin:auto;
   margin-top: 50px;
@@ -91,8 +95,7 @@ h1{
   font-size: 27px;
 }
 .cipherDecipherSection{
-  background:rgba(245, 82, 55, 0.3);
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 form{
@@ -107,7 +110,7 @@ form{
 .errorMessage{
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  color:#BA0737;
+  color:#FF1749;
   font-weight:bold;
   font-size: 19px;
 }
@@ -115,24 +118,34 @@ textarea{
   resize: none;
   font-size: 15px;
   height: 80px;
-  width: 65%;
+  width: 85%;
 }
 textarea:focus, input:focus{
-  border: 1px solid #000000;
+  border: 2px solid #000000;
 }
 textarea, input{
-  border-radius: 4px;
+  border-radius: 8px;
   font-family:'Ubuntu', sans-serif;
   padding: 5px;
+  outline: none;
+  border: 2px solid #FFFFFF;
 }
-label, textarea{
+/* label, textarea{
   display:inline-block;
   vertical-align:middle;
-}
+} */
 .numberInput{
   font-size: 15px;
-  width: 10%;
+  width: 30%;
+  height: 30px;
   margin-top: 10px;
+}
+.messageInput::placeholder, .numberInput::placeholder{
+  text-align: center;
+  padding-top: 10px;
+  font-family:'Ubuntu', sans-serif;
+  color: #000000;
+  font-size: 18px;
 }
 .cipherDecipherButtons{
   border-radius: 5px;
@@ -141,7 +154,7 @@ label, textarea{
   margin-top: 15px;
   margin-bottom: 10px;
   margin-right: 6px;
-  padding: 6px 16px;
+  padding: 10px 25px;
   font-size: 18px;
   cursor:pointer;
   font-family:'Ubuntu', sans-serif;
@@ -155,12 +168,13 @@ label, textarea{
   margin-top: 15px;
   margin-bottom: 10px;
   margin-right: 6px;
-  padding: 6px 16px;
+  padding: 10px 16px;
   font-size: 17px;
   cursor:pointer;
   font-family:'Ubuntu', sans-serif;
-  background:#801863;
-  color:#ffffff;
+  border: 3px solid #FF1749;
+  background-color: rgba(255, 23, 73, 0.2);
+  color: #FFFFFF;
 }
 button:hover{
   background:#ffffff;
@@ -169,9 +183,12 @@ button:hover{
 .cipherDecipherMessage{
   border-radius: 10px;
   border: 2px solid #ffffff;
+  color: #656565;
   padding: 8px;
   font-family:'Ubuntu', sans-serif;
   font-size: 18px;
+  width: 85%;
+  margin: auto;
 }
 .social{
   position: fixed;
@@ -217,7 +234,7 @@ button:hover{
     width: 75%;
   }
   .mainLogo{
-    width: 40%;
+    width: 60%;
   }
   h1{
     font-size: 26px;
@@ -226,6 +243,9 @@ button:hover{
     width: 95%;
     padding: 25px 12px;
     font-size: 20px;
+  }
+  .numberInput{
+    width: 50%;
   }
   .social{
     top: 350px;
@@ -257,11 +277,14 @@ button:hover{
     width: 80%;
   }
   .mainLogo{
-    width: 50%;
+    width: 70%;
   }
   form{
     width: 95%;
     padding: 28px 12px;
+  }
+  .numberInput{
+    width: 50%;
   }
   .social {
     width: 95%;
@@ -287,7 +310,7 @@ button:hover{
 }
 @media screen and (min-width: 320px) and (max-width: 539px) {
   .welcomeLogo {
-    width: 90%;
+    width: 98%;
   }
   .instructionsPage{
     padding: 40px 0px;
@@ -307,18 +330,18 @@ button:hover{
     width: 80%;
   }
   .mainLogo{
-    width: 80%;
+    width: 90%;
   }
   h1{
     font-size: 22px;
   }
   form{
-    width: 93%;
+    width: 95%;
     padding: 28px 13px;
   }
   .numberInput{
     font-size: 15px;
-    width: 13%;
+    width: 60%;
   }
   .social {
     width: 97%;

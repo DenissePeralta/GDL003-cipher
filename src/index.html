@@ -14,39 +14,41 @@
    <body>
       <!-- Welcome page with start button -->
       <div class="welcomePage" id="welcomePage">
-         <img class="welcomeLogo" src="Imagenes/shhhLogo.png" alt="logo">
-         <button type="button" class="startButton" id="startButton">Comenzar</button>
+         <img class="welcomeLogo" src="Imagenes/shhhLogo.svg" alt="logo">
+         <button type="button" class="startButton" id="startButton">Ingresar</button>
       </div>
       <!-- Instructions page with next button -->
       <div class="instructionsPage" id="instructionsPage">
-         <img class="instructionsLogo" src="Imagenes/shhhLogo.png" alt="logo">
-         <p class="instructions">Shhh! es la nueva aplicación que te permitirá cifrar y descifrar tus
+         <img class="instructionsLogo" src="Imagenes/shhhLogo.svg" alt="logo">
+         <p class="instructions">Shhh! es la nueva aplicación que te permitirá cifrar y descifrar
             conversaciones personales para así confundir a los intrusos que quieran leerlas. Obtendrás mensajes 
             secretos en cuestión de segundos, los cuales podrás compartir con todos tus contactos en las diversas redes sociales.<br><br>
-            Para comenzar solo tendrás que ingresar el texto que quieras mantener en secreto, escoger un número al azar
-            del 1 al 100 para agregarle complejidad y finalmente presionar el botón de cifrar/descifrar para obtener el resultado.
-            No olvides anotar y compartir el número que elegiste con las personas que desees para que puedan descifrar el mensaje.<br><br>
+            Para comenzar solo tendrás que hacer lo siguiente:<br>
+            ➊ Ingresa o escribe el texto que quieres mantener en secreto
+            ➋ Escoge un número al azar del 1 al 100 para agregarle complejidad
+            ➌ Presiona el botón de cifrar/descifrar para obtener el resultado
+            ➍ Utiliza el botón de copiar valores, péga y envía
+            ➎ Finalmente compárte el número que elegiste para que puedan descifrar tu mensaje secreto.<br><br>
          </p>
-         <button type="button" class="nextButton" id="nextButton">Siguiente </button>
+         <button type="button" class="nextButton" id="nextButton">Comenzar </button>
       </div>
       <!-- Main page with the cipher and decipher functionality-->
       <div class="mainPage" id="mainPage">
-         <img class="mainLogo" src="Imagenes/shhhLogo.png" alt="logo">
-         <h1>Ahora podrás cifrar y descifrar tus conversaciones antes de enviarlas</h1>
+         <img class="mainLogo" src="Imagenes/shhhLogo.svg" alt="logo">
          <!-- Section with cipher and decipher form and buttons. Also clear values and copy message buttons-->
          <div class="cipherDecipherSection">
             <form class="cipherDecipherForm" method="post">
                <p class="errorMessage" id="errorMessage"></p>
-               <label for="messageInput">Mensaje:</label>
-               <textarea id="messageInput" class="messageInput" placeholder="Escribe una frase o mensaje"></textarea><br>
-               <label for="numberInput">Número:</label>
-               <input type="number" placeholder="###" id="numberInput" class="numberInput"/><br>
+               <!-- <label for="messageInput">Mensaje:</label> -->
+               <textarea id="messageInput" class="messageInput" placeholder="ESCRIBE TU MENSAJE AQUÍ"></textarea><br>
+               <!-- <label for="numberInput">Número:</label> -->
+               <input type="number" id="numberInput" class="numberInput" placeholder="NÚMERO 1 al 100"/><br><br>
                <button type="button" class="cipherDecipherButtons" id="cipher">Cifrar</button>
                <button type="button" class="cipherDecipherButtons" id="decipher">Descifrar</button>
                <p>Aquí obtendrás tu mensaje cifrado/descifrado:</p>
                <div class="cipherDecipherMessage" id="cipherDecipherMessage"></div>
-               <button type="button" class="clearCopyButtons" id="clearValuesButton">Limpiar valores</button>
                <button type="button" class="clearCopyButtons" id="copyMessageButton">Copiar mensaje</button>
+               <button type="button" class="clearCopyButtons" id="clearValuesButton">Limpiar valores</button>
             </form>
          </div>
          <!-- Social media links-->
