@@ -12,12 +12,12 @@
       <link href="https://fonts.googleapis.com/css?family=Oswald:300&display=swap" rel="stylesheet"/>
    </head>
    <body>
-      <!-- Welcome page with start button -->
+      <!-- Welcome page with enter button -->
       <div class="welcomePage" id="welcomePage">
-         <img class="welcomeLogo" src="Imagenes/shhhLogo.svg" alt="logo">
-         <button type="button" class="startButton" id="startButton">Ingresar</button>
+         <img class="welcomeLogo" src="Imagenes/shhhLogo_White.svg" alt="logo">
+         <button type="button" class="enterButton" id="enterButton">Ingresar</button>
       </div>
-      <!-- Instructions page with next button -->
+      <!-- Instructions page with start button -->
       <div class="instructionsPage" id="instructionsPage">
          <img class="instructionsLogo" src="Imagenes/shhhLogo.svg" alt="logo">
          <p class="instructions">Shhh! es la nueva aplicación que te permitirá cifrar y descifrar
@@ -27,14 +27,18 @@
             ➊ Ingresa o escribe el texto que quieres mantener en secreto
             ➋ Escoge un número al azar del 1 al 100 para agregarle complejidad
             ➌ Presiona el botón de cifrar/descifrar para obtener el resultado
-            ➍ Utiliza el botón de copiar valores, péga y envía
-            ➎ Finalmente compárte el número que elegiste para que puedan descifrar tu mensaje secreto.<br><br>
+            ➍ Utiliza el botón para copiar valores, pega y envía
+            ➎ Finalmente comparte con tus destinarios el número que elegiste para que puedan descifrar tu mensaje secreto.<br><br>
          </p>
-         <button type="button" class="nextButton" id="nextButton">Comenzar </button>
+         <button type="button" class="startButton" id="startButton">Comenzar </button>
       </div>
       <!-- Main page with the cipher and decipher functionality-->
       <div class="mainPage" id="mainPage">
          <img class="mainLogo" src="Imagenes/shhhLogo.svg" alt="logo">
+         <div class="pinkIcons">
+            <img src="Imagenes/PNG/previousButton.png" alt="Regresar" class="previousButton" id="previousButton">
+            <img src="Imagenes/PNG/homeButton.png" alt="Inicio" class="homeButton" id="homeButton">
+         </div>
          <!-- Section with cipher and decipher form and buttons. Also clear values and copy message buttons-->
          <div class="cipherDecipherSection">
             <form class="cipherDecipherForm" method="post">

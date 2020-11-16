@@ -38,8 +38,8 @@ Esta aplicación web esta dirigida a aquellas personas que valoren su privacidad
 * HTML5
 * CSS3
 * JS ES6
-* Ribbet
+* Affinity Designer
 
 ## Proyecto creado por:
 ---
-Denisse Peralta Barrales [LinkedIn](https://www.linkedin.com/in/denisse-peralta/)
+Denisse Peralta [LinkedIn](https://www.linkedin.com/in/denisse-peralta/)

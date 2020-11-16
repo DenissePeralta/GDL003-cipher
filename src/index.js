@@ -2,17 +2,31 @@ document.getElementById("instructionsPage").style.display = "none";
 document.getElementById("mainPage").style.display = "none";
 
 //Function to go from Welcome page to the instructions page
-let startButton = document.getElementById('startButton');
-startButton.addEventListener("click", () => {
+let enterButton = document.getElementById('enterButton');
+enterButton.addEventListener("click", () => {
 	document.getElementById("welcomePage").style.display = "none";
 	document.getElementById("instructionsPage").style.display = "block";
 });
 
 //Function to go from instructions page to the cipher/decipher main page
-let nextButton = document.getElementById('nextButton');
-nextButton.addEventListener("click", () => {
+let startButton = document.getElementById('startButton');
+startButton.addEventListener("click", () => {
 	document.getElementById("instructionsPage").style.display = "none";
 	document.getElementById("mainPage").style.display = "block";
+});
+
+//Function to go back to previous instructions page
+let previousButton = document.getElementById('previousButton');
+previousButton.addEventListener("click", () => {
+	document.getElementById("instructionsPage").style.display = "block";
+	document.getElementById("mainPage").style.display = "none";
+	clearValues();
+});
+
+//Function to go back to home page
+let homeButton = document.getElementById('homeButton');
+homeButton.addEventListener("click", () => {
+	location.reload();
 });
 
 //Function to cipher a message
@@ -50,13 +64,14 @@ decodeButton.addEventListener("click", () => {
 });
 
 //Function to clear all the form values/inputs
-let resetValuesButton = document.getElementById('clearValuesButton');
-resetValuesButton.addEventListener("click", () => {
+let clearValues = () => {
 	document.getElementById("messageInput").value = "";
 	document.getElementById("numberInput").value = "";
 	document.getElementById("cipherDecipherMessage").innerHTML = "";
 	document.getElementById("errorMessage").innerHTML = "";
-});
+};
+let resetValuesButton = document.getElementById('clearValuesButton');
+resetValuesButton.addEventListener("click", clearValues);
 
 //Function to copy on the clipboard the cipher/decipher message (we can use the clipboard.js API instead)
 let copyMessageButton = document.getElementById('copyMessageButton');
